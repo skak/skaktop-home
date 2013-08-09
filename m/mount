@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo mount /dev/sd$1 ./sd$1
+exit 0
