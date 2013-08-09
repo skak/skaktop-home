@@ -1,0 +1,10 @@
+#!/bin/bash
+# to fix my volume after i fixed it the first time with fixvol.sh and kill it dead
+# real fucking dead
+# skak
+amixer -q set Master 0%
+amixer -q set PCM 0%
+amixer -q set Headphone 0%
+amixer -q set Speaker 0%
+amixer -q set IEC958 on
+amixer -q set 'IEC958 Default PCM' on

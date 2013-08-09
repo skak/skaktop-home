@@ -1,0 +1,47 @@
+# -*- shell-script -*-
+#
+# anrxc's xbindkeys configuration
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key (+ key)
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4 (Win), Mod5 (Scroll).
+
+# Uncomment if you want to pay attention to *Lock modifiers
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+"amixer -q sset Master toggle"
+    XF86AudioMute
+
+"amixer -q sset PCM 2dB-"
+    XF86AudioLowerVolume
+
+"amixer -q sset PCM 2dB+"
+    XF86AudioRaiseVolume
+
+"iron"
+    XF86WWW
+
+"urxvt -title Alpine -e alpine"
+    XF86Mail
+
+"xlock"
+    XF86ModeLock
+
+"scrot -e feh"
+    Print
+
+"xrefresh"
+    XF86Refresh
+
+"gqview"
+    XF86Pictures
+
+#"sudo pm-hibernate"
+#    XF86Sleep
+# End of xbindkeys configuration

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ $UID != "0" ]]; then
+  sudo su
+fi
+
+mkinitcpio -p linux;
+mkinitcpio -p linux-ck;
+mkinitcpio -p linux-lts;
+mkinitcpio -p linux-zen;
+
+exit 0

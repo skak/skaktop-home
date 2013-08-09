@@ -1,0 +1,86 @@
+_NET_WM_ICON_NAME(UTF8_STRING) = 
+WM_ICON_NAME(STRING) = 
+_NET_WM_NAME(UTF8_STRING) = "Kelsey Smith - Skype™"
+_NET_WM_ICON_GEOMETRY(CARDINAL) = 625, 872, 28, 28
+_NET_WM_DESKTOP(CARDINAL) = 0
+WM_STATE(WM_STATE):
+		window state: Normal
+		icon window: 0x0
+_NET_WM_SYNC_REQUEST_COUNTER(CARDINAL) = 62914664
+_NET_WM_USER_TIME(CARDINAL) = 41324581
+_NET_WM_ICON(CARDINAL) = 	Icon (48 x 48):
+	                                                
+	                                                
+	          ░░░░░░░                               
+	       ░░░░░░░░░░░░░░░░░░░░░░                   
+	      ░░░░░░░░░░░░░░░░░░░░░░░░░░                
+	     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░              
+	    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░            
+	   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░           
+	   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░          
+	  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░         
+	  ░░░░░░░░░░░░░░░░░░       ░░░░░░░░░░░░░        
+	  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒░             ░▒▒▒▒▒▒▒▒▒░       
+	  ▒▒▒▒▒▒▒▒▒▒▒▒▒░                ░▒▒▒▒▒▒▒▒░      
+	  ▒▒▒▒▒▒▒▒▒▒▒▒░                  ░▒▒▒▒▒▒▒▒      
+	  ▒▒▒▒▒▒▒▒▒▒▒░        ░░         ░▒▒▒▒▒▒▒▒░     
+	  ▒▒▒▒▒▒▒▒▒▒▒       ░▒▒▒▒▒░       ▒▒▒▒▒▒▒▒▒░    
+	  ░▒▒▒▒▒▒▒▒▒▒      ░▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒░    
+	  ░▒▒▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒░    ░▒▒▒▒▒▒▒▒▒▒    
+	   ▒▒▒▒▒▒▒▒▒▒      ░▒▒▒▒▒▒▒▒▒▒░░░▒▒▒▒▒▒▒▒▒▒▒░   
+	   ░▒▒▒▒▒▒▒▒▒       ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░   
+	   ░▒▒▒▒▒▒▒▒▒░          ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░   
+	   ▒▒▒▒▒▒▒▒▒▒░              ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   
+	   ▒▒▒▒▒▒▒▒▒▒▒░                ░▒▒▒▒▒▒▒▒▒▒▒▒▒   
+	   ▒▒▒▒▒▒▒▒▒▒▒▒░                 ▒▒▒▒▒▒▒▒▒▒▒▒   
+	   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒░                ▒▒▒▒▒▒▒▒▒▒▒   
+	   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░            ░▒▒▒▒▒▒▒▒▒▒   
+	   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░         ▒▒▒▒▒▒▒▒▒▒   
+	   ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░       ▒▒▒▒▒▒▒▒▒░   
+	   ░▒▒▒▒▒▒▒▒▒░   ░▒▒▒▒▒▒▒▒▒▒░      ▒▒▒▒▒▒▒▒▒░   
+	   ░▒▒▒▒▒▒▒▒▒     ░▒▒▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒   
+	    ▒▒▒▒▒▒▒▒▒      ░▒▒▒▒▒▒▒▒░      ▒▒▒▒▒▒▒▒▒▒░  
+	    ░▒▒▒▒▒▒▒▒       ░▒▒▒▒▒▒░       ▒▒▒▒▒▒▒▒▒▒░  
+	    ░▒▒▒▒▒▒▒▒░        ░░░░        ░▒▒▒▒▒▒▒▒▒▒▒  
+	     ▒▒▒▒▒▒▒▒▒                   ░▒▒▒▒▒▒▒▒▒▒▒▒  
+	     ░▒▒▒▒▒▒▒▒▒                 ░▒▒▒▒▒▒▒▒▒▒▒▒▒  
+	      ░▒▒▒▒▒▒▒▒▒░              ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒  
+	      ░▒▒▒▒▒▒▒▒▒▒▒░░        ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  
+	       ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░  
+	        ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░  
+	         ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   
+	          ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░   
+	           ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    
+	            ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░    
+	              ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░     
+	                ░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░      
+	                   ░░░░░░░░░░░░▒▒▒▒▒▒▒░░        
+	                               ░░░░░░░          
+	                                                
+
+
+XdndAware(ATOM) = BITMAP
+_MOTIF_DRAG_RECEIVER_INFO(_MOTIF_DRAG_RECEIVER_INFO) = 0x6c, 0x0, 0x5, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x10, 0x0, 0x0, 0x0
+WM_CLIENT_LEADER(WINDOW): window id # 0x3c00004
+WM_WINDOW_ROLE(STRING) = "ConversationsWindow"
+_NET_WM_PID(CARDINAL) = 16259
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x3, 0x3e, 0x7e, 0x0, 0x0
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW, WM_TAKE_FOCUS, _NET_WM_PING, _NET_WM_SYNC_REQUEST
+WM_NAME(COMPOUND_TEXT) = "Kelsey Smith - Skype™"
+WM_LOCALE_NAME(STRING) = "en_US.UTF-8"
+WM_CLASS(STRING) = "skype", "Skype"
+WM_HINTS(WM_HINTS):
+		Client accepts input or input focus: True
+		Initial state is Normal State.
+		bitmap id # to use for icon: 0x3c00065
+		window id # of group leader: 0x3c00004
+WM_NORMAL_HINTS(WM_SIZE_HINTS):
+		user specified location: 1, 20
+		program specified location: 1, 20
+		user specified size: 700 by 879
+		program specified size: 700 by 879
+		program specified minimum size: 700 by 300
+		window gravity: Static
+WM_CLIENT_MACHINE(STRING) = "skaktop"
+WM_COMMAND(STRING) = { "/usr/lib32/skype/skype" }

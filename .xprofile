@@ -1,0 +1,3 @@
+# .xprofile to set things to run at same time as graphical login
+xrandr --dpi 99.89
+usbmuxd -U skak -v -v -v

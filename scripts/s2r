@@ -1,0 +1,63 @@
+#!/bin/bash
+
+echo "Alpha script, needs work"
+
+if [[ $1 == "" ]] || [[ $1 == " " ]]; then
+ echo "Please enter argument"
+ exit 0
+fi
+
+cpfile () {
+  if [ -f "/home/skak/$1" ]; then
+    cp /home/skak/$1 /root/
+  elif [ -d "/home/skak/$1" ]; then
+    cp -R /home/skak/$1 /root/
+  elif [ -h "/home/skak/$1" ]; then
+    echo "$1 is a symbolic link, and is out of the scope of this script."
+    exit 0
+  else
+    echo "$1 is a fucking fucked up file name and you've been given a small piece of lemon mirangue pie, the monkey nods silently."
+    exit 1
+  fi
+}
+rootcpfile () {
+  if [ -f "/home/skak/$1" ]; then
+    sudo cp /home/skak/$1 /root/
+  elif [ -d "/home/skak/$1" ]; then
+    sudo cp -R /home/skak/$1 /root/
+  elif [ -h "/home/skak/$1" ]; then
+    echo "$1 is a symbolic link, and is out of the scope of this script."
+    exit 0
+  else
+    echo "$1 is a fucking fucked up file name and you've been given a small piece of lemon mirangue pie, the monkey nods silently."
+    exit 1
+  fi
+}
+
+if [ ! -f /home/skak/$1 ] && [ ! -d /home/skak/$1 ]; then
+  echo "Input valid filename"
+  exit 1
+fi  
+
+if [ -f /home/skak/$1 ]; then
+  echo "$1 is a file"
+elif [ -d /home/skak/$1 ]; then
+  echo "$1 is a dir"
+fi
+
+if [[ $UID == "0" ]]; then
+  cpfile $1
+  echo "$1 copied to root home"
+  exit 0
+elif [[ $UID != "0" ]]; then
+  echo "Using sudo"
+  rootcpfile $1
+  echo "$1 copied to root home"
+  exit 0
+else
+  echo "Presumably this means your UID is not equal to a numerical value"
+  echo "Not entirely sure how you'd be receiving this message at all then"
+  echo "You special wizard, you."
+  exit 0
+fi
+

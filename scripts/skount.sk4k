@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "your username, sir?"
+read -e name
+if [[ $name == "skak" ]]
+    echo "yur passed the mark."
+else 
+    echo "yee be the wrong dude, mon."
+fi
+
+#lettergrab ()
+#{
+#  echo "sd..\?"
+#  read -e a
+exit 0

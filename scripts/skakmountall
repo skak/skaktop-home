@@ -1,0 +1,42 @@
+#!/bin/bash
+# courtesy of SkAk, June 09, 2013, at roughly 20:11 is when I began
+# ArchLinux, K.I.S.S., y'heard
+echo "Checking for root, sir."
+if [[ "$UID" == 0 ]]; then
+	echo "You seem to be root, sir."
+	echo "Continuing."
+#	mount /dev/sda1 ~/mount/sda1
+#	mount /dev/sda2 ~/mount/sda2
+#	mount /dev/sda3 ~/mount/sda3
+	mount /dev/sda4 ~/mount/sda4
+	mount /dev/sda5 ~/mount/sda5
+	mount /dev/sda6 ~/mount/sda6
+#	mount /dev/sda7 ~/mount/sda7
+#	mount /dev/sda8 ~/mount/sda8
+	mount /dev/sda9 ~/mount/sda9
+	echo "/dev/sda{1-9} has been mounted, save for commented out entries in script."
+#	mount /dev/sdb1 ~/mount/sdb1
+#	mount /dev/sdb2 ~/mount/sdb2
+#	mount /dev/sdb3 ~/mount/sdb3
+	echo "/dev/sdb{1-3} has been mounted, save for commented out entries in script."
+#	mount /dev/sdc1 ~/mount/sdc1
+#	mount /dev/sdc2 ~/mount/sdc2
+#	mount /dev/sdc3 ~/mount/sdc3
+#	mount /dev/sdc4 ~/mount/sdc4
+	echo "/dev/sdc{1-4} has been mounted, save for commented out entries in script."
+#	mount /dev/mmcblk0p1 ~/mount/mmcblk0p1
+	echo "/dev/mmcblk0p1 has been mounted, unless you commented it out in script."
+elif [[ "$UID" != 0 ]]; then
+	echo "Silly guy!"
+	echo "You are not root!"
+	echo "Input your sudo password or CTRL+C for cancel."
+	sudo su;
+else
+	echo "You might be missing sudo."
+	echo "Or you're just simply a baby penguin."
+	echo "Regardless, something has gone to hell."
+	exit 1
+fi
+
+
+

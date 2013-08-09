@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $1 == "diag" ]];
+then
+exec idevicediagnostics diagnostics $2
+elif [[ $1 == "install" ]];
+then
+exec ideviceinstaller -i $2
+else
+  exit 1
+fi
+
+

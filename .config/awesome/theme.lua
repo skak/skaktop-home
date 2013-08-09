@@ -1,0 +1,1 @@
+/home/skak/.config/awesome/skakburn/theme.lua

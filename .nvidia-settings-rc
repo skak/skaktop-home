@@ -1,0 +1,52 @@
+#
+# /home/skak/.nvidia-settings-rc
+#
+# Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
+# Generated on Sun Jun 30 02:54:33 2013
+#
+
+# ConfigProperties:
+
+RcFileLocale = C
+ToolTips = Yes
+DisplayStatusBar = Yes
+SliderTextEntries = Yes
+IncludeDisplayNameInConfigFile = Yes
+ShowQuitDialog = No
+Timer = Memory_Used_(GPU_0),Yes,3000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+
+# Attributes:
+
+skaktop.ok.shawcable.net:0.0/CursorShadow=1
+skaktop.ok.shawcable.net:0.0/CursorShadowAlpha=64
+skaktop.ok.shawcable.net:0.0/CursorShadowRed=0
+skaktop.ok.shawcable.net:0.0/CursorShadowGreen=0
+skaktop.ok.shawcable.net:0.0/CursorShadowBlue=0
+skaktop.ok.shawcable.net:0.0/CursorShadowXOffset=4
+skaktop.ok.shawcable.net:0.0/CursorShadowYOffset=2
+skaktop.ok.shawcable.net:0.0/SyncToVBlank=1
+skaktop.ok.shawcable.net:0.0/LogAniso=0
+skaktop.ok.shawcable.net:0.0/FSAA=0
+skaktop.ok.shawcable.net:0.0/TextureSharpen=0
+skaktop.ok.shawcable.net:0.0/TextureClamping=1
+skaktop.ok.shawcable.net:0.0/FXAA=0
+skaktop.ok.shawcable.net:0.0/AllowFlipping=1
+skaktop.ok.shawcable.net:0.0/FSAAAppControlled=1
+skaktop.ok.shawcable.net:0.0/LogAnisoAppControlled=1
+skaktop.ok.shawcable.net:0.0/OpenGLImageSettings=2
+skaktop.ok.shawcable.net:0.0/DigitalVibrance[DFP-0]=0
+skaktop.ok.shawcable.net:0.0/ImageSharpening[DFP-0]=0
+skaktop.ok.shawcable.net:0.0/ColorSpace[DFP-0]=0
+skaktop.ok.shawcable.net:0.0/ColorRange[DFP-0]=0
+skaktop.ok.shawcable.net:0.0/XVideoSyncToDisplay=65536
+skaktop.ok.shawcable.net:0[dpy:2]/RedBrightness=0.000000
+skaktop.ok.shawcable.net:0[dpy:2]/GreenBrightness=0.000000
+skaktop.ok.shawcable.net:0[dpy:2]/BlueBrightness=0.000000
+skaktop.ok.shawcable.net:0[dpy:2]/RedContrast=0.000000
+skaktop.ok.shawcable.net:0[dpy:2]/GreenContrast=0.000000
+skaktop.ok.shawcable.net:0[dpy:2]/BlueContrast=0.000000
+skaktop.ok.shawcable.net:0[dpy:2]/RedGamma=1.000000
+skaktop.ok.shawcable.net:0[dpy:2]/GreenGamma=1.000000
+skaktop.ok.shawcable.net:0[dpy:2]/BlueGamma=1.000000

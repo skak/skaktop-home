@@ -1,0 +1,19 @@
+#!/bin/bash
+# skak says update yourself, computer
+# computer will obey, computer does not want the hose again
+# computer is a nice servant, computer obliges
+# skak
+LOGFILE=/home/skak/paclog.log
+
+if [[ "$UID" != 0 ]]; then
+zenity --error --text="You need root, sir." &
+exit 1
+elif [[ "$UID" == 0 ]]; then
+# pacman -q -Syu --noconfirm | zenity --list --title "System Upgrade" --text "Upgrading your system" --column "1" --column "2" --column "3" --column "4" --column "5" --column "6" --column "7" --column "8"
+pacman -Syu | zenity --progress --text=updating --pulsate --no-cancel
+exit 0
+else
+zenity --error "Something has gone wrong." &
+exit 1
+fi
+

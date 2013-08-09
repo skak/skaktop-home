@@ -1,0 +1,4 @@
+#/bin/bash
+# xmessage "`packer -Ss $1`"
+packer -Ss $1 | zenity --list --title "Packer -Ss $1" --text "We found these for $1" --column "Pkg" --width 200 --height 200 &
+exit 0

@@ -1,0 +1,10 @@
+#!/bin/bash
+# to fix ze volume because my pcm keeps dropping randomly when i reboot and it's
+# fucking pissing me off
+# skak
+amixer -q set Master 75% on
+amixer -q set PCM 75% on
+amixer -q set Headphone 75% on
+amixer -q set Speaker 75% on
+amixer -q set IEC958 on
+amixer -q set 'IEC958 Default PCM' on
