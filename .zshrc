@@ -11,6 +11,18 @@ ZSH_THEME="robbyrussell"
 
 
 # alias ---{{{
+
+# git ---{{{
+alias @g="git"
+alias @ga="git add"
+alias @gc="git clone"
+alias @gcomm="git commit -m"
+alias @gp="git push"
+alias @ggc="git config --global"
+alias @glc="git config --local"
+alias @gsc="git config --system"
+# ---}}}
+
 alias @rg="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias @rb="sudo burg-mkconfig -o /boot/grub/grub.cfg"
 alias burgcfg=@rb
