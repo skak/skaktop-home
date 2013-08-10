@@ -1,0 +1,100 @@
+#!/bin/bash
+
+app=""
+globalyn=""
+
+# check() {{{
+check () {
+  checkyn=""
+  echo -n "continue?(y/n)"
+  read checkyn;
+  if [[ "checkyn" == "n" ]]; then
+    echo "see ya\!"
+    exit 0
+  elif [[ "checkyn" == "y" ]]; then
+    echo "continuing"
+  else
+    echo "a key other than y or n was pressed, aborting"
+    exit 1
+  fi
+}
+# }}}
+# readme() {{{
+readme () {
+  readme=""
+  readmedone=""
+  echo -n "view README before make attempt (yn) "
+  read readme;
+  if [[ "$readme" == "y" ]]; then
+    cat README
+    echo -n "just type done when you are done and press enter"
+    read readmedone;
+    while [[ $readmedone != "done" ]]; do
+      echo -n "please type done if you are done reading and would like to continue "
+      read readmedone;
+      if [[ $readmedone == "quit" ]]; then
+        exit 0
+      fi
+    done
+  fi
+}
+# }}}
+# premake() {{{
+# aclocal: error: 'configure.ac' is required
+# automake: error: 'configure.ac' is required
+# autoconf: error: no input file
+# autoheader: 'configure.ac' or 'configure.in' is required
+# automake: error: 'configure.ac' is required
+# autoconf: error: no input file
+premake () {
+if [[ -e ./autogen.sh ]]; then
+  ./autogen.sh
+fi
+if [[ -e ./configure.ac ]]; then
+  aclocal
+fi
+if [[ -e ./configure.in || -e ./configure.ac ]]; then
+  autoconf
+fi
+  libtoolize
+if [[ -e ./configure.in || -e ./configure.ac ]]; then
+  autoheader
+fi
+  automake --add-missing
+  automake
+  ./configure --prefix=/usr
+}
+# }}}
+# contyn() {{{
+contyn () {
+while [[ $contin != "make" || $contin != "skip" || $contin != "exit" ]]; do
+  contin=""
+  echo "make, skip, quit?"
+  read contin;
+  if [[ "$contin" == "exit" ]]; then
+    exit 0
+  elif [[ "$contin" == "make" ]]; then
+    make;
+    sudo make install;
+  elif [[ "$contin" == "skip" ]]; then
+    echo "skipping!"
+  else
+    echo "that was not a known value, try again."
+  fi
+done
+contin=""
+}
+# }}}
+
+app="libimobiledevice"
+  if [ ! -d $app ]; then
+    echo "no directory libimobiledevice, consider running update1"
+  else
+    cd $app
+  fi
+readme
+premake
+contyn
+
+
+check
