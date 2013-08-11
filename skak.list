@@ -1,0 +1,11 @@
+deb http://apt.saurik.com/ ios/690.10 main
+deb http://cydia.myrepospace.com/iLEXiNFO/ ./
+deb http://cydia.51ipa.com/ ./
+deb http://repo.insanelyi.com/ ./
+deb http://rpetri.ch/repo/ ./
+deb http://apt.thebigboss.org/repofiles/cydia/ stable main
+deb http://cydia.crazydoraemon.com/ ./
+deb http://cydia.myrepospace.com/ilex/ ./
+deb http://sinfuliphonerepo.com/ ./
+deb http://apt.modmyi.com/ stable main
+deb http://bcooperizcool.indigo.dragon-dev.co.uk/waffles/ ./

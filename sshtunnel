@@ -1,0 +1,3 @@
+#!/bin/bash
+# ssh tunnelling weeee
+ssh -p 2400 -t -L $1:localhost:$1 carrie@174.4.0.138 '"$2"'
