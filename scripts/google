@@ -1,0 +1,11 @@
+#!/bin/bash
+if [[ "$*" == "" ]] || [[ "$*" == "--help" ]]; then
+  echo "Usage:"
+  echo "$0 <search term and as many spaces as you would like goes here>..."
+  echo "This will yield results in w3m."
+  exit 0
+else
+  w3m http://www.google.ca/search?q="$*";
+  exit 0
+fi
+exit 0
