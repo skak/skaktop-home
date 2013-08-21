@@ -1,10 +1,17 @@
 # variables ---{{{
+export SKAK=/home/skak
+export SKRIPT=/home/skak/skript
 export CDR_NODMATEST=1
 export ZSH=$HOME/.oh-my-zsh
 export TERM=rxvt-unicode-256color
 export BROWSER=chromium
 export LYNX_CFG=~/.lynx.cfg
 export VBOX_USB=usbfs
+
+# big ass 1.5TB harddrive
+export skon=/mnt/monsterskak
+export skon_data=/mnt/monsterskak/data
+export skon_data_root=/mnt/monsterskak/data/root
 # Look in ~/.oh-my-zsh/themes/    ZSH_THEME="random" to randomize per login
 ZSH_THEME="robbyrussell"
 # ---}}}
@@ -22,12 +29,13 @@ alias @ggc="git config --global"
 alias @glc="git config --local"
 alias @gsc="git config --system"
 # ---}}}
-
+alias -g v="vim"
+alias -g s="sudo"
 alias @rg="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias @rb="sudo burg-mkconfig -o /boot/grub/grub.cfg"
+alias @rb="sudo burg-mkconfig -o /boot/burg/burg.cfg"
 alias burgcfg=@rb
 alias grubcfg=@rg
-
+alias back="cd \"$OLDPWD\""
 # random ---{{{
 alias pacdeath="sudo killall pacman && sudo rm /var/lib/pacman/db.lck"
 alias @ez="vim ~/.zshrc"
@@ -115,15 +123,25 @@ alias \#pqi="sudo pacman -Qi"
 alias sysupgsu="sudo packer --noconfirm --noedit --devel -Syu"
 alias sysupg="packer --noconfirm --noedit --devel -Syu"
 alias pkgget="packer --noconfirm --noedit -S"
+alias getpkg="packer --noconfirm --noedit -S"
+alias pkgdown="packer --noconfirm --noedit -G"
+alias downpkg="packer --noconfirm --noedit -G"
 alias pkgsuget="sudo packer --noconfirm --noedit -S"
+
 alias pkgfind="packer -Ss"
 alias pkglist="packer -Sy"
-alias @p="sudo packer"
-alias @ps="sudo packer -S"
-alias @pss="sudo packer -Ss"
-alias @psyu="sudo packer -Syu"
-alias @psyyu="sudo packer -Syyu"
-alias @pg="sudo packer -G"
+alias @p="packer"
+alias @ps="packer -S"
+alias @pss="packer -Ss"
+alias @psyu="packer -Syu"
+alias @psyyu="packer -Syyu"
+alias @pg="packer -G"
+alias @sp="sudo packer"
+alias @sps="sudo packer -S"
+alias @spss="sudo packer -Ss"
+alias @spsyu="sudo packer -Syu"
+alias @spsyyu="sudo packer -Syyu"
+alias @spg="sudo packer -G"
 # ---}}} 
 
 # pacaur ---{{{
@@ -198,3 +216,4 @@ export PATH=$PATH:/opt/homebrew/bin:~/scripts/depot_tools:/.rvm/bin:/opt/android
 
 export CODESIGN_ALLOCATE=/usr/bin/arm-apple-darwin11-codesign_allocate
 xinitrc=~/.xinitrc
+LFS=/mnt/lfs

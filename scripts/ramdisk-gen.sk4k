@@ -1,12 +1,15 @@
 #!/bin/bash
 
-if [[ $UID != "0" ]]; then
-  sudo su
+#if [[ $UID != "0" ]]; then
+#  sudo su
+#fi
+if [[ "$1" != "all" ]]; then
+  sudo mkinitcpio -p "$1";
 fi
-
-mkinitcpio -p linux;
-mkinitcpio -p linux-ck;
-mkinitcpio -p linux-lts;
-mkinitcpio -p linux-zen;
-
+if [[ "$1" == "all" ]]; then
+  sudo mkinitcpio -p linux;
+  sudo mkinitcpio -p linux-ck;
+  sudo mkinitcpio -p linux-lts;
+  sudo mkinitcpio -p linux-zen;
+fi
 exit 0

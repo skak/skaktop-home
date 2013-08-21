@@ -67,14 +67,22 @@ fi
 # }}}
 # contyn() {{{
 contyn () {
+while [[ $contin != "make" || $contin != "skip" || $contin != "exit" ]]; do
   contin=""
   echo "make, skip, quit?"
   read contin;
   if [[ "$contin" == "exit" ]]; then
     exit 0
+  elif [[ "$contin" == "make" ]]; then
+    make;
+    sudo make install;
+  elif [[ "$contin" == "skip" ]]; then
+    echo "skipping!"
   else
-    return $contin
+    echo "that was not a known value, try again."
   fi
+done
+contin=""
 }
 # }}}
 
@@ -86,14 +94,7 @@ app="libimobiledevice"
   fi
 readme
 premake
-globalyn=contyn
-    if [[ $globalyn == "make" ]]; then
-        make
-        sudo make install
-    elif [[ $globalyn == "skip" ]]; then
-        echo "skipping"
-    else
-        echo "fatal error, abort."
-        exit 1    
-    fi
+contyn
+
+
 check

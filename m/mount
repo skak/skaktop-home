@@ -1,4 +1,16 @@
 #!/bin/bash
 
-sudo mount /dev/sd$1 ./sd$1
-exit 0
+if [[ "$1" == "monsterskak" ]];
+then
+  echo -n "Please type drive letter:"
+  read -e mountvar;
+  sudo mount /dev/sd"$mountvar"3 /mnt/monsterskak
+  sudo mount /dev/sd"$mountvar"2 /mnt/monsterskak/boot
+  sudo mount /dev/sd"$mountvar"4 /mnt/monsterskak/home
+  sudo mount /dev/sd"$mountvar"5 /mnt/monsterskak/var
+  sudo mount /dev/sd"$mountvar"6 /mnt/monsterskak/data
+  exit 0
+else
+  sudo mount /dev/sd$1 ./sd$1
+  exit 0
+fi

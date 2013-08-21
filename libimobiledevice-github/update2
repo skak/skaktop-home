@@ -48,7 +48,7 @@ readme () {
 # autoconf: error: no input file
 premake () {
 if [[ -e ./autogen.sh ]]; then
-  ./autogen.sh
+  ./autogen.sh --prefix=/usr
 fi
 if [[ -e ./configure.ac ]]; then
   aclocal
