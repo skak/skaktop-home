@@ -1,0 +1,33 @@
+#!/bin/bash
+#tiny ass script for linking some shit up
+#ie skaktop-home is in home folder, so make ln -s of crucials 
+
+checkshit () {
+echo "start checks"
+if [[ `whoami` == "root" ]]; then
+  echo "hey dumfuk don't run this thing as root or you won't be able to use your files."
+  exit 0
+fi
+if [[ `whoami` != "skak" ]]; then
+  echo "you should be logged into user skak if you wanna run this skript dumfuk"
+  exit 0
+fi
+if [[ `whoami` == "skak" ]]; then
+  echo "hello, sir."
+fi
+
+if [[ `pwd` == "/home/skak" ]]; then
+  echo "correct, you are in skaks home dir"
+else
+  echo "wrong dir nub. lazy coder here."
+  exit 0
+fi
+}
+
+checkshit
+echo "it would seem you've survived the checks."
+echo "very well"
+echo "linkin it all up now"
+
+
+exit 0
