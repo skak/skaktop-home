@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 == "" ]]; then
+echo "Usage:"
+echo "You need one argument. That argument will be used as reference for this specific backup."
+echo "ie $0 meow would create a file called mirrorlist.meow.bak at /etc/pacman.d/"
+echo "for this reason it's probably best not to include a space in your argument ie meow\\ meow"
+exit 0
+elif [[ $1 != "" ]]; then
+sudo cp "/etc/pacman.d/mirrorlist" "/etc/pacman.d/mirrorlist.$1.bak"
+sudo reflector --verbose --country 'Canada' -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
+echo "Used sudo, mirrorlist generated for Canada"
+exit 0
+else
+echo "Something gon' fuck'd up thur sonny boi"
+exit 1
+fi
+
+exit 0

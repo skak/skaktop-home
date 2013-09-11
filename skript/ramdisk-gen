@@ -1,0 +1,18 @@
+#!/bin/bash
+if [[ "$1" == "" ]]; then
+  echo "ramdisk-gen requires one argument, and that argument can be the name of a preset file in mkinitcpio.d or the word all"
+  echo "all currently builds linux, linux-ck, linux-lts, linux-zen"
+  exit 0
+fi
+if [[ "$1" != "all" ]]; then
+  sudo mkinitcpio -p "$1";
+  exit 0
+fi
+if [[ "$1" == "all" ]]; then
+  sudo mkinitcpio -p linux;
+  sudo mkinitcpio -p linux-ck;
+  sudo mkinitcpio -p linux-lts;
+  sudo mkinitcpio -p linux-zen;
+  exit 0
+fi
+exit 0

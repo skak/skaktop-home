@@ -1,0 +1,13 @@
+#!/bin/bash
+
+urxvt -e alsamixer &
+
+if [[ "$1" == "off" ]]; then
+amixer -q set playback Master,0 0dB mute
+fi
+
+if [[ "$1" == "on" ]]; then
+amixer -q set playback Master,0 unmute
+fi
+
+exit 0

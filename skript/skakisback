@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [[ $1 == "diag" ]];
+    then
+  exec idevicediagnostics diagnostics $2
+elif [[ $1 == "install" ]];
+    then
+  exec ideviceinstaller -i $2
+elif [[ $1 == "info" ]];
+    then
+  exec ideviceinfo
+elif [[ $1 == "id" ]];
+    then
+  exec idevice_id -l
+elif [[ $1 == "recov" ]];
+    then
+  exec ideviceenterrecovery -d d2f32c0e02c42b5834a43d624a47a3b2ec8c5338
+
+else
+  exit 1
+fi
+
+

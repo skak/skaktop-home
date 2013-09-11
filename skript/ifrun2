@@ -1,0 +1,5 @@
+if [ $(ps aux | grep -e 'process_name$' | grep -v grep | wc -l | tr -s "\n") -eq 0 ]; then process_name; fi
+
+echo 'if [ $(ps aux | grep $1 | grep -v grep | wc -l | tr -s "\n") -eq 0 ]; then $*; fi' >> $(echo $PATH | awk -F: '{print $2}')/chup;
+echo 'if [ $(ps aux | grep $1 | grep -v grep | wc -l | tr -s "\n") -eq 0 ]; then $*; fi' >> $(echo $PATH | awk -F: '{print $2}')/chup;
+

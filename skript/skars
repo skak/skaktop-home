@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+export DISPLAY=:0;
+exit 0
+
+

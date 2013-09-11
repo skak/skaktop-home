@@ -1,0 +1,8 @@
+#!/bin/bash
+ADDTODO=""
+set ADDTODO=""
+echo -n "Add this to todo list: "
+read ADDTODO;
+echo "$ADDTODO" >> /home/skak/todo;
+exit 0
+

@@ -1,0 +1,2 @@
+if [ $(ps aux | grep -e "$1\$" | grep -v grep | wc -l | tr -s "
+") -eq 0 ]; then $*; fi

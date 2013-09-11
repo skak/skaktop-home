@@ -1,0 +1,6 @@
+#!/bin/bash
+
+carriephone="SPH-A640"
+echo "Carries flip phone is $carriephone"
+exit 0
+

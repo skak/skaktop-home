@@ -1,0 +1,3 @@
+#!/bin/bash
+w3m http://www.google.ca/search?q="$*";
+exit 0

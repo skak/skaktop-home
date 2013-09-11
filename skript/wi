@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo killall wpa_supplicant;
+sudo killall NetworkManager;
+sudo killall netctl;
+sudo killall netctl-auto;
+sudo systemctl reset-failed;
+sudo netctl-auto start $1
+
+exit 0

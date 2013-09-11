@@ -1,0 +1,35 @@
+#!/bin/bash
+# just a lil script to replace all spaces with underscores in a
+# folder and then install the files one by one to the connected
+# adb android device
+# skak feb09/2013
+workingdir=`pwd`
+cd /home/skak/Downloads/ && mv *.apk ${workingdir}
+cd ${workingdir}
+
+# replace spaces with underscores in the file names
+find . -name '* *' | while read file;
+do
+  target=`echo "$file" | sed 's/ /_/g'`;
+  echo "Renaming '$file' to '$target'";
+  mv "$file" "$target";
+done;
+
+# declare the variables and output the number of apks found
+# maybe at a later date i can have it save a list of the apks
+# it has already installed and compare it with the list it is installing
+COUNT="`ls -1 ~/crystal_phone | grep apk | wc -l`";
+let "COUNT -= 1"
+CONTAINER=(`ls -1 *apk`);
+echo $COUNT "Android APKs found.";
+
+t=1;
+for (( i = 0; i <= "$COUNT"; i++ ))
+do
+  echo "Installing ${t}st apk...";
+  echo ${CONTAINER[$i]};
+  adb install ${CONTAINER[$i]};
+  sleep 2;
+  mv "${CONTAINER[$i]}" "../done/";
+  t++
+done;

@@ -1,0 +1,18 @@
+#!/bin/bash
+# replace spaces with underscores in the file names
+find . -name '* *' | while read file;
+do
+  target=`echo "$file" | sed 's/ /_/g'`;
+  echo "Renaming '$file' to '$target'";
+  mv "$file" "$target";
+done;
+COUNT="`ls -1 ~/crystal_phone | grep apk | wc -l`"
+CONTAINER=(`ls -1 *apk`)
+echo $COUNT "Android APKs found."
+for (( i = 0; i <= "$COUNT"; i++ ))
+do
+  echo "Counted $i times"
+  echo ${CONTAINER[$i]}
+  adb install ${CONTAINER[$i]}
+  sleep 2
+done
