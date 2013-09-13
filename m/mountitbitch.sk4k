@@ -1,0 +1,118 @@
+#!/bin/bash
+
+# **** LENGTH TESTER SCRIPT
+# echo -n "enter a string"
+# read string
+# len=$(echo ${string})
+# if [ $len -lt 5 ]; then
+#   echo "$string doesn't have atleast 5 characters"
+# else
+#   echo "$string has 5 or more characters"
+# fi
+
+dirmaker () {
+  if [[ "$plett" == "" ]]; then
+    echo "vars didn't pass, exiting"
+    exit 0
+  fi
+  for (( a; a <= b; a++ )) do
+    b="9"
+    pnum="$a"
+    pdir="sd${plett}${pnum}"
+    if [ ! -d ./"${pdir}" ] && [[ "$a" != "" ]]; then
+      mkdir ./"${pdir}" && echo "made dir ./${pdir}"
+    fi
+  done
+  unset a
+}
+
+mmcmaker () {
+  if [[ "$plett" == "" ]]; then
+    echo "vars didn't pass, exiting"
+    exit 0
+  fi
+  for (( a; a <= b; a++ )) do
+    b="9"
+    pnum="$a"
+    pdir="mmcblk0${plett}${pnum}"
+    if [ ! -d ./"${pdir}" ] && [[ "$a" != "" ]]; then
+      mkdir ./"${pdir}" && echo "made dir ./${pdir}"
+    fi
+  done
+  unset a
+}
+
+if [[ "$1" == "" ]]; then
+  echo ""
+  echo ""
+  echo "$0 usage: $0 argument"
+  echo ""
+  echo "Where argument can be any of the following."
+  echo "NOTICE: Some of these are specific to me, skak."
+  echo ""
+  echo "$0 can make dirs in this folder for you to have $0 mount drives at."
+  echo ""
+  echo "$0 mkdirs"
+  echo "           will make you some dirs as mountpoints."
+  echo ""
+  echo "$0 can mount a drive at a mountpoint"
+  echo ""
+  echo "$0 a5 would mount /dev/sda5 at ./sda5"
+  echo "No support yet for sdcards ie. mmcblk0p1"
+  echo ""
+  echo "$0 can mount a certain massive external disc named monsterskak"
+  echo "In a future version I will be changing the name to skon. monsterskak is a fingerfull"
+  echo ""
+  echo "$0 monsterskak"
+  echo "                will ask for the drive letter, so type lsblk before typing that and give"
+  echo "                this script the drive letter so that it can mount the harddrive in question"
+  echo "                with ease."
+  echo ""
+  echo "I am sure there is more functionality in this skript but I don't sleep enough and so I've forgotten."
+  echo "When I get a chance I'll review it and continue writing this how-to."
+  echo "skak will close the skript for you now."
+  echo ""
+  echo ""
+  exit 0
+fi
+
+if [[ "$1" == "mkdirs" ]]; then
+  echo "$0 will check for relative mountpoint folders now."
+  export plett="a"; dirmaker
+  export plett="b"; dirmaker
+  export plett="c"; dirmaker
+  export plett="d"; dirmaker
+  export plett="e"; dirmaker
+
+  export plett="0p"; mmcmaker
+  echo "up to sde9 has been created"
+  echo "one set of mmcblk dirs made"
+  exit 0
+fi
+
+if [[ "$1" == "monsterskak" ]]; then
+  echo -n "Please type drive letter:"
+  read -e mountvar;
+  if [ ! -d /mnt/monsterskak ]; then
+  sudo  mkdir /mnt/monsterskak
+  fi
+  sudo mount /dev/sd"$mountvar"3 /mnt/monsterskak
+  sudo mount /dev/sd"$mountvar"2 /mnt/monsterskak/boot
+  sudo mount /dev/sd"$mountvar"4 /mnt/monsterskak/home
+  sudo mount /dev/sd"$mountvar"5 /mnt/monsterskak/var
+  sudo mount /dev/sd"$mountvar"6 /mnt/monsterskak/data
+  exit 0
+fi
+
+arg1="$1"
+LEN=$(echo ${#arg1})
+
+if [[ "$LEN" == "2" ]]; then
+  sudo mount /dev/sd$1 ./sd$1
+  exit 0
+fi
+
+echo "somehow you made it to the end of the script... that's not right"
+echo "every if statement has an exit 0 attached to it..."
+exit 0
+# add support for folders: /mnt/arch,iso,lfs,monsterskak,winxp
