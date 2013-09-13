@@ -1,0 +1,6 @@
+2011-05-10:
+	- version 1.1
+	- add iPad 2 support (thanks to Perry Neben)
+	- fix Makefile to correctly link with libusb-1.0 in Debian
+2010-11-26:
+	- first version 1.0
