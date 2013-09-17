@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# GET INPUT WHETHER USER IS COMING FROM INSIDE THE NEW SYSTEM OR IS STILL ON THE INSIDE
+echo "Installing a few non-crufty packages..."
+echo "Are you pacman or pacstrap?"
+read -e skakvar
+
+# TEST IF USER TYPED INTO skakvar PROPERLY
+if [[ $skakvar != "pacman" ]] || [[ $skakvar != "pacstrap" ]]; then
+  echo "You'll need to use pacman or pacstrap after you restart this script."
+  echo "Error"
+  exit 1
+fi
+
+# TEST IF USER IS ROOT OR IF USER NEEDS SUDO
+if [[ $UID == "0" ]]; then
+  sku=""
+elif [[ $UID != "0" ]]; then
+  sku="sudo "
+else
+  echo "Error"
+  exit 1
+fi
+
+# IF USER IS USING pacman THEN REFRESH THE PACKAGE LIST
+# PACSTRAP REFRESHES THE LIST AUTOMATICALLY
+if [[ $skakvar = "pacman" ]]; then
+  $sku$skakvar -Syy
+fi
+
+$sku$skakvar -S yaourt zsh awesome vicious
+
+exit 0

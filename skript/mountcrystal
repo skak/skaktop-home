@@ -1,0 +1,21 @@
+#!/bin/bash
+
+sudo mount /dev/sdb3 /mnt
+sudo mount /dev/sdb1 /mnt/boot
+sudo mount /dev/sdb4 /mnt/home
+sudo swapon /dev/sdb6
+
+echo -n "Chroot in, as well?"
+read -e skakyn;
+
+if [[ $skakyn == "y" ]]; then
+ sudo arch-chroot /mnt /bin/bash
+elif [[ $skakyn == "n" ]]; then
+  echo "see ya"
+  exit 0
+else
+  echo "error"
+  exit 1
+fi
+
+exit 0

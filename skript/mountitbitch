@@ -1,0 +1,94 @@
+#!/bin/bash
+
+# **** LENGTH TESTER SCRIPT
+# echo -n "enter a string"
+# read string
+# len=$(echo ${string})
+# if [ $len -lt 5 ]; then
+#   echo "$string doesn't have atleast 5 characters"
+# else
+#   echo "$string has 5 or more characters"
+# fi
+
+dirmaker () {
+  if [[ "$plett" == "" ]]; then
+    echo "vars didn't pass, exiting"
+    exit 0
+  fi
+  for (( a; a <= b; a++ )) do
+    b="9"
+    pnum="$a"
+    pdir="sd${plett}${pnum}"
+    if [ ! -d ./"${pdir}" ] && [[ "$a" != "" ]]; then
+      mkdir ./"${pdir}" && echo "made dir ./${pdir}"
+    fi
+  done
+  unset a
+}
+
+mmcmaker () {
+  if [[ "$plett" == "" ]]; then
+    echo "vars didn't pass, exiting"
+    exit 0
+  fi
+  for (( a; a <= b; a++ )) do
+    b="9"
+    pnum="$a"
+    pdir="mmcblk0${plett}${pnum}"
+    if [ ! -d ./"${pdir}" ] && [[ "$a" != "" ]]; then
+      mkdir ./"${pdir}" && echo "made dir ./${pdir}"
+    fi
+  done
+  unset a
+}
+
+if [[ "$1" == "" ]]; then
+  echo "$0 usage: $0 xy"
+  echo "          where x is the letter of the partition"
+  echo "          and y is the number: ex. a1 would mount /dev/sda1 at ./sda1"
+  echo "$0 also knows how to mount a monsterskak."
+  echo "Pass \"monsterskak\" as the first argument to $0 to mount it."
+  echo "$0 will ask for the drive letter, find the drive letter with lsblk"
+  exit 0
+fi
+
+if [[ "$1" == "mkdirs" ]]; then
+  echo "$0 will check for relative mountpoint folders now."
+  export plett="a"; dirmaker
+  export plett="b"; dirmaker
+  export plett="c"; dirmaker
+  export plett="d"; dirmaker
+  export plett="e"; dirmaker
+
+  export plett="0p"; mmcmaker
+  echo "up to sde9 has been created"
+  echo "one set of mmcblk dirs made"
+  exit 0
+fi
+
+if [[ "$1" == "monsterskak" ]]; then
+  echo -n "Please type drive letter:"
+  read -e mountvar;
+  if [ ! -d /mnt/monsterskak ]; then
+  sudo  mkdir /mnt/monsterskak
+  fi
+  sudo mount /dev/sd"$mountvar"3 /mnt/monsterskak
+  sudo mount /dev/sd"$mountvar"2 /mnt/monsterskak/boot
+  sudo mount /dev/sd"$mountvar"4 /mnt/monsterskak/home
+  sudo mount /dev/sd"$mountvar"5 /mnt/monsterskak/var
+  sudo mount /dev/sd"$mountvar"6 /mnt/monsterskak/data
+  exit 0
+fi
+
+arg1="$1"
+LEN=$(echo ${#arg1})
+
+if [[ "$LEN" == "2" ]]; then
+  sudo mount /dev/sd$1 ./sd$1
+  exit 0
+fi
+
+echo "somehow you made it to the end of the script... that's not right"
+echo "every if statement has an exit 0 attached to it..."
+exit 0
+# add support for folders: /mnt/arch,iso,lfs,monsterskak,winxp

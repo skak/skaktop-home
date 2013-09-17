@@ -1,0 +1,11 @@
+#!/bin/bash
+# copying my personal scripts and filesssss
+
+sudo cp -a /home/skak/.zshrc /mnt/home/$1/
+sudo cp -a /home/skak/autoprompt.sh /mnt/home/$1/
+sudo cp -a /home/skak/scripts /mnt/home/$1/
+sudo cp -a /etc/pacman.conf /mnt/etc/pacman.conf
+sudo cp -a /etc/slim.conf /mnt/etc/slim.conf
+sudo cp -a /home/skak/shtuff /mnt/home/$1/
+
+exit 0

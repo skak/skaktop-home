@@ -1,0 +1,22 @@
+#!/bin/bash
+
+sudo umount /dev/sdb3 /mnt/home
+sudo umount /dev/sdb1 /mnt/boot
+sudo umount /dev/sdb4 /mnt
+sudo swapoff /dev/sdb6
+
+echo -n "reboot, shutdown, or nothing??"
+read -e skakyn;
+
+if [[ $skakyn == "reboot" ]]; then
+  sudo reboot
+elif [[ $skakyn == "shutdown" ]]; then
+  sudo poweroff
+elif [[ $skakyn == "nothing" ]]; then
+  echo "okie seeya"
+else
+  echo "error"
+  exit 1
+fi
+
+exit 0
