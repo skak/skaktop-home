@@ -1,0 +1,9 @@
+deb http://apt.saurik.com/ ios/1141.16 main
+deb http://harrisonapps.com/repo/ ./
+deb http://cydia.zodttd.com/repo/cydia/ stable main
+deb http://apt.thebigboss.org/repofiles/cydia/ stable main
+deb http://cydia.myrepospace.com/iphonezone/ ./
+deb http://hacx.org/repo/ ./
+deb http://apt.youyuanapp.com/ ./
+deb http://apt.modmyi.com/ stable main
+deb http://cydia.myrepospace.com/skakkix/ ./

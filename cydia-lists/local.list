@@ -1,0 +1,3 @@
+deb http://proteantweak.com/repo/ ./
+deb http://coolstar.org/publicrepo/ ./
+deb http://nix.howett.net/theos/ ./

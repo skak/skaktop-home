@@ -1,0 +1,32 @@
+deb http://apt.25pp.com/ ./
+deb http://cydia.appaddict.org/ ./
+deb http://cydia.iphonecake.com/ ./
+deb http://cydia.appshape.net/ ./
+deb http://apt.dba-tech.net/beta/ ./
+# deb http://cydiaporn.com/repo/ ./
+deb http://exile90software.com/cydia/beta/ ./
+deb http://exile90software.com/cydia/ ./
+deb http://repo.hackyouriphone.org/ ./
+deb http://hacx.org/repo/ ./
+deb http://cydia.hbang.ws/ ./
+deb http://cydia.myrepospace.com/ilex/ ./
+deb http://cydia.myrepospace.com/ilexinfo/ ./
+deb http://system.in-appstore.com/repo/ ./
+deb http://repo.insanelyi.com/ ./
+deb http://cydia.myrepospace.com/JBpirate/ ./
+deb http://cydia.jerryen.com/ ./
+deb http://cydia.angelxwind.net/ ./
+# deb http://cpios.net/ ./
+deb http://parrotgeek.net/repo/ ./
+deb http://cydia.myrepospace.com/Prinks/ ./
+deb http://cydia.qusic.me/ ./
+deb http://rpetri.ch/repo/ ./
+deb http://sinfuliphonerepo.com/ ./
+deb http://cydia.myrepospace.com/siris/ ./
+deb http://www.tateu.net/repo/ ./
+deb http://mirrors.xbmc.org/apt/ios/ ./
+deb http://test-cydia.bitesms.com/ ./
+deb http://r333d.com/repo/ ./
+deb http://repo.tylercasson.com/ ./
+deb http://cydia.myrepospace.com/urus/ ./
+deb http://repo.zeusmos.com/ ./
