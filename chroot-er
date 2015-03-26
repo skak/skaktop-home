@@ -1,0 +1,14 @@
+echo "Which dir for the chroot?"
+echo -n ": "
+read cdir;
+
+sudo cp /etc/resolv.conf "$cdir"/etc
+sudo mount -t proc /proc "$cdir"/proc
+sudo mount --rbind /sys "$cdir"/sys
+sudo mount --rbind /dev "$cdir"/dev
+sudo mount --rbind /run "$cdir"/run
+
+echo "Attempting to chroot into dir now."
+
+sudo chroot "$cdir" /bin/bash
+
