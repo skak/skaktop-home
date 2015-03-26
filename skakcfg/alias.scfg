@@ -1,0 +1,48 @@
+#alias file
+#by skak
+#for archlinux
+
+# pacman #
+alias pac="pacman"
+alias pacget="pacman -S --noconfirm"
+alias pacforceget="pacman --force -S --noconfirm"
+alias pacsearch="pacman -Ss"
+alias pacquery="pacman -Qs"
+alias pacrem="pacman -R"
+alias paclist="pacman -Sl"
+alias pacgroup="pacman -Sg"
+alias pacdl="pacman -Sw"
+
+# pacaur #
+alias @p="pacaur --noedit --noconfirm"
+alias @pss="pacaur -Ss --noedit --noconfirm"
+alias @ps="pacaur -S --noedit --noconfirm"
+alias @psy="pacaur -Sy --noedit --noconfirm"
+alias @psyu="pacaur -Syu --noedit --noconfirm"
+alias @psyyu="pacaur -Syyu --noedit --noconfirm"
+alias @psyuu="pacaur -Syuu --noedit --noconfirm"
+alias @psyyuu="pacaur -Syyuu --noedit --noconfirm"
+alias @pr="pacaur -R"
+alias @prns="pacaur -Rns"
+alias @prnsc="pacaur -Rnsc"
+alias @pclean="pacaur -Scc"
+alias @pscc="pacaur -Scc"
+alias @pq="pacaur -Q"
+alias @pqs="pacaur -Qs"
+alias @psg="pacaur -Sg"
+alias @psw="pacaur -Sw"
+alias @psl="pacaur -Sl"
+
+# edit files #
+alias @ez="vim $HOME/.zshrc"
+alias @eb="vim $HOME/.bashrc"
+alias @sz="source $HOME/.zshrc"
+alias @sb="source $HOME/.bashrc"
+
+# goto dirs #
+alias d-awm="$HOME/.config/awesome"
+alias d-x11="/etc/X11/xorg.conf.d"
+alias d-xses="/usr/share/xsessions"
+alias d-grub="/boot/grub"
+alias d-grubcfg="/etc/grub.d"
+alias d-def="/etc/default"
