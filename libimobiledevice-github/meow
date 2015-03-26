@@ -1,5 +1,0 @@
-aclocal: error: 'configure.ac' is required
-automake: error: 'configure.ac' is required
-autoconf: error: no input file
-autoheader: 'configure.ac' or 'configure.in' is required
-automake: error: 'configure.ac' is required
